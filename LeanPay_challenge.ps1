@@ -41,7 +41,7 @@ Write-Host ""
 #Ovaj deo skripte jednostavno prikazuje informacije o sistemu korišćenjem funkcija koje sam definisao ranije. 
 #$(...) dodaje vrednost rezultata funkcija unutar stringa.
 
-Display running processes
+# Prikazivanje pokrenutih procesa
 Write-Host "Running Processes:"
 Get-Process | Format-Table -AutoSize
 #Ovaj deo skripte prikazuje sve pokrenute procese na računaru koristeći Get-Process cmdlet. 
