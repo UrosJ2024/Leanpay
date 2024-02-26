@@ -1,9 +1,19 @@
-﻿# Kreiranje direktorijuma "Leanpay"
+# Kreiranje direktorijuma "Leanpay"
 New-Item -ItemType Directory -Path "C:\Users\Public\Leanpay"
 
-# Kreiranje .txt fajla i upisivanje "Hello world!" unutar njega
-Set-Content -Path "C:\Users\Public\Leanpay\TextFile.txt" -Value "Hello world!"
+# Putanja do .txt fajla
+$txtFilePath = "$direktorijumPath\TextFile.txt"
 
+# Upisivanje "Hello world!" u .txt fajl
+Set-Content -Path $txtFilePath -Value "Hello world!"
+
+Write-Host ""
+# Provera da li je fajl uspešno kreiran
+if (Test-Path $txtFilePath) {
+    Write-Host "Fajl 'TextFile.txt' uspešno kreiran i tekst uspešno upisan."
+} else {
+    Write-Host "Došlo je do greške prilikom kreiranja fajla 'TextFile.txt'."
+}
 
 <#KORISNIK SAM BIRA GDE CUVA FAJL
 
